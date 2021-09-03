@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Penguin extends Bird implements ISwim, IMakeSound, IWalk{
-
+    String Name;
     public Penguin(double wingSpan, String name) {
         super(wingSpan, name);
+        Name = name;
     }
 
     @Override
@@ -30,5 +31,9 @@ public class Penguin extends Bird implements ISwim, IMakeSound, IWalk{
         System.out.println("Waddle waddle");
     }
     
+    @Override
+    public String toString() {
+        return Name;
+    }
     
 }

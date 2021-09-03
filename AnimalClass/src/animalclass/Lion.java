@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Lion extends Mammal implements IWalk, IMakeSound{
-
+    String Name;
     public Lion(double bodyTemp, String name) {
         super(bodyTemp, name);
+        Name = name;
     }
 
     @Override
@@ -23,6 +24,11 @@ public class Lion extends Mammal implements IWalk, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println("Roaaar!");
+    }
+    
+    @Override
+    public String toString() {
+        return Name;
     }
     
 }

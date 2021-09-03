@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Shark extends Fish implements ISwim, IMakeSound{
-
+    String Name;
     public Shark(boolean isSaltWater, String name) {
         super(isSaltWater, name);
+        Name = name;
     }
 
     @Override
@@ -25,5 +26,8 @@ public class Shark extends Fish implements ISwim, IMakeSound{
         System.out.println("Om nom nom");
     }
     
-    
+    @Override
+    public String toString() {
+        return Name;
+    }
 }

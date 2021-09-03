@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Bat extends Mammal implements IFly, IMakeSound{
-
+    String Name;
     public Bat(double bodyTemp, String name) {
         super(bodyTemp, name);
+        Name = name;
     }
 
     @Override
@@ -23,6 +24,11 @@ public class Bat extends Mammal implements IFly, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println("Screech!");
+    }
+    
+    @Override
+    public String toString() {
+        return Name;
     }
     
 }

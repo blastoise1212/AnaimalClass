@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Ostrich extends Bird implements IWalk, IMakeSound{
-
+    String Name;
     public Ostrich(double wingSpan, String name) {
         super(wingSpan, name);
+        Name = name;
     }
 
     @Override
@@ -23,6 +24,11 @@ public class Ostrich extends Bird implements IWalk, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println("Squawk!");
+    }
+    
+    @Override
+    public String toString() {
+        return Name;
     }
     
     

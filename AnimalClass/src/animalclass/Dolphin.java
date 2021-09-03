@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Dolphin extends Mammal implements ISwim, IMakeSound{
-
+    String Name;
     public Dolphin(double bodyTemp, String name) {
         super(bodyTemp, name);
+        Name = name;
     }
 
     @Override
@@ -23,6 +24,11 @@ public class Dolphin extends Mammal implements ISwim, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println("Whistle");
+    }
+    
+    @Override
+    public String toString() {
+        return Name;
     }
     
 }

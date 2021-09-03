@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class Eagle extends Bird implements IFly, IMakeSound{
-
+    String Name;
     public Eagle(double wingSpan, String name) {
         super(wingSpan, name);
+        Name = name;
     }
     
     @Override
@@ -25,4 +26,8 @@ public class Eagle extends Bird implements IFly, IMakeSound{
         System.out.println("Screech!");
     }
     
+    @Override
+    public String toString() {
+        return Name;
+    }
 }

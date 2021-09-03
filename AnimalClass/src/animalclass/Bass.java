@@ -25,10 +25,12 @@ public class Bass extends Fish implements ISwim, IMakeSound{
     public void makeSound() {
         System.out.println("Glub glub");
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return Name;
     }
+    
+    
     
 }

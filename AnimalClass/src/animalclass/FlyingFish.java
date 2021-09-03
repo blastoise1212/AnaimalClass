@@ -10,9 +10,10 @@ package animalclass;
  * @author mkreiner
  */
 public class FlyingFish extends Fish implements ISwim, IFly, IMakeSound{
-
+    String Name;
     public FlyingFish(boolean isSaltWater, String name) {
         super(isSaltWater, name);
+        Name = name;
     }
 
     @Override
@@ -28,6 +29,11 @@ public class FlyingFish extends Fish implements ISwim, IFly, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println("Glub glub");
+    }
+    
+    @Override
+    public String toString() {
+        return Name;
     }
     
     
